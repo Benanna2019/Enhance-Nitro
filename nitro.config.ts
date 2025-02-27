@@ -3,18 +3,27 @@ export default defineNitroConfig({
   // srcDir: "src",
   rootDir: "src",
   routesDir: "src/server/routes",
-  publicAssets: [{
-    baseURL: 'browser',
-    dir: './src/public/browser'
-  }, {
-    baseURL: 'elements',
-    dir: './src/elements'
-  }],
+  publicAssets: [
+    {
+      baseURL: "browser",
+      dir: "./src/public/browser",
+    },
+    {
+      baseURL: "elements",
+      dir: "./src/elements",
+    },
+  ],
+  serverAssets: [
+    {
+      baseName: "pages",
+      dir: "./src/pages",
+    },
+  ],
   compatibilityDate: "2025-02-23",
   serveStatic: true,
 });
 
-// add a default renderer? 
+// add a default renderer?
 
 // ./renderer
 

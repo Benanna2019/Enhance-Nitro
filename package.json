@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "build": "nitro build",
-    "dev": "nitro dev",
+    "dev": "nitro dev --port 3001",
     "prepare": "nitro prepare",
     "preview": "node .output/server/index.mjs"
   },
@@ -13,6 +13,7 @@
   "dependencies": {
     "@enhance/custom-element": "^1.2.4",
     "@enhance/element": "^1.4.6",
-    "@enhance/ssr": "^4.0.3"
+    "@enhance/ssr": "^4.0.3",
+    "unhead": "^1.11.20"
   }
 }

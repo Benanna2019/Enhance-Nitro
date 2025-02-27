@@ -1,0 +1,9 @@
+[ ] - make generic handler that injects plugins
+[ ] - add components folder like enhance convention
+[ ] - start working with data (maybe unjs mongo package?)
+[ ] - setup auth handlers
+[ ] - get basic LiveStore Todos example working (client side)
+[ ] - setup LiveStore SSR (github link - )
+[ ] - look into reactivity with signals (specific to SSR examples without local first look into how datastar is doing this)
+[ ] - WASM route handlers? (try writing a route handler in Go)
+ 
