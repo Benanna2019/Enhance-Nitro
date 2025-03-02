@@ -3,6 +3,7 @@ export default defineNitroConfig({
   // srcDir: "src",
   rootDir: "src",
   routesDir: "src/server/routes",
+  apiDir: "src/api",
   publicAssets: [
     {
       baseURL: "browser",
@@ -18,27 +19,11 @@ export default defineNitroConfig({
       baseName: "pages",
       dir: "./src/pages",
     },
+    {
+      baseName: "elements",
+      dir: "./src/elements",
+    },
   ],
   compatibilityDate: "2025-02-23",
   serveStatic: true,
 });
-
-// add a default renderer?
-
-// ./renderer
-
-// import { defineRenderHandler } from "nitropack/runtime";
-
-// export default defineRenderHandler((_event) => {
-//   return {
-//     body: /* html */ `<!DOCTYPE html>
-//     <html>
-//       <head>
-//         <title>Rendered Page</title>
-//         </head>
-//         <body>
-//             <h1>Rendered by Nitro!</h1>
-//         </body>
-//     </html>`,
-//   };
-// });
