@@ -1,14 +1,16 @@
-import enhance from '@enhance/ssr';
-import HelloWorld from '../../elements/hello-world.js';
-
+import enhance from "@enhance/ssr";
+import HelloWorld from "../../elements/hello-world.js";
 
 export default defineEventHandler((event) => {
-   // Example of using enhance.dev for SSR
-//   console.log("event", event.node.req)
+  // Example of using enhance.dev for SSR
+  //   console.log("event", event.node.req)
+
+  console.log("event", event);
+
   const html = enhance({
     elements: {
-      'hello-world': HelloWorld,
-    }
+      "hello-world": HelloWorld,
+    },
   });
   // Example of calling WASM function
 
@@ -27,7 +29,9 @@ export default defineEventHandler((event) => {
         </script>
       </head>
       <body>
-        ${html`<hello-world greeting="Server Rendered about page!"></hello-world>`}
+        ${html`<hello-world
+          greeting="Server Rendered about page!"
+        ></hello-world>`}
         <h1>Hello World</h1>
         <my-counter count=5></my-counter>
 <my-increment click></my-increment>
@@ -39,7 +43,7 @@ export default defineEventHandler((event) => {
   // Render your response
   return new Response(fullPage, {
     headers: {
-      'Content-Type': 'text/html',
+      "Content-Type": "text/html",
     },
   });
 });

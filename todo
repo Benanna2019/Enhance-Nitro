@@ -6,4 +6,6 @@
 [ ] - setup LiveStore SSR (github link - )
 [ ] - look into reactivity with signals (specific to SSR examples without local first look into how datastar is doing this)
 [ ] - WASM route handlers? (try writing a route handler in Go)
- 
+[ ] - Dynamo DB (long way then move to begin/data)
+[ ] - GraphQL api's - Use dataloaders and graphql api's to fetch data
+[ ] - use clerk or supertokens for auth 
