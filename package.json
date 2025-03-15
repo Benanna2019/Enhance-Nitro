@@ -7,6 +7,7 @@
     "preview": "node .output/server/index.mjs"
   },
   "devDependencies": {
+    "better-sqlite3": "^11.8.1",
     "nitropack": "latest"
   },
   "packageManager": "pnpm@10.4.1+sha512.c753b6c3ad7afa13af388fa6d808035a008e30ea9993f58c6663e2bc5ff21679aa834db094987129aa4d488b86df57f7b634981b2f827cdcacc698cc0cfb88af",
@@ -14,6 +15,11 @@
     "@enhance/custom-element": "^1.2.4",
     "@enhance/element": "^1.4.6",
     "@enhance/ssr": "^4.0.3",
-    "unhead": "^1.11.20"
+    "@libsql/client": "^0.14.0",
+    "bcryptjs": "^3.0.2",
+    "effect": "^3.13.7",
+    "jsonwebtoken": "^9.0.2",
+    "unhead": "2.0.0-rc.1",
+    "zod": "^3.24.2"
   }
 }

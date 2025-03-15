@@ -1,0 +1,6 @@
+<!-- File: server/routes/views/user-info.html -->
+<div class="user-card">
+  <h2>{{ user.email }}</h2>
+  <p>User ID: {{ user.id }}</p>
+  <p>Joined: {{ format_date(user.created_at) }}</p>
+</div>

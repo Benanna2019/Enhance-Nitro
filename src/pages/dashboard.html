@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/css/auth.css" />
+    <script src="https://unpkg.com/htmx.org@1.9.6"></script>
+    <script src="/js/auth.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">MyApp</div>
+        <div class="nav-links">
+          <auth-protected>
+            <a href="/dashboard" hx-boost="true">Dashboard</a>
+            <a href="/profile" hx-boost="true">Profile</a>
+            <logout-button></logout-button>
+          </auth-protected>
+          <guest-only>
+            <a href="/login" hx-boost="true">Login</a>
+            <a href="/register" hx-boost="true">Register</a>
+          </guest-only>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container">
+      <auth-protected>
+        <h1>Welcome to Your Dashboard</h1>
+        <div
+          id="user-info"
+          hx-get="/api/me"
+          hx-trigger="load"
+          hx-swap="innerHTML"
+        >
+          Loading user information...
+        </div>
+      </auth-protected>
+
+      <guest-only>
+        <div class="unauthorized">
+          <h1>Unauthorized</h1>
+          <p>You need to login to access this page.</p>
+          <a href="/login" class="btn btn-primary" hx-boost="true">Login</a>
+        </div>
+      </guest-only>
+    </main>
+  </body>
+</html>

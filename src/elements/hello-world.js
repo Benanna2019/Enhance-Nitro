@@ -1,7 +1,6 @@
 export default function HelloWorld({ html, state }) {
   const { attrs } = state;
   const { greeting = "Hello World" } = attrs;
-  console.log("store in hello world", state.store);
   return html`
     <style scope="global">
       h1 {

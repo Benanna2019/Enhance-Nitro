@@ -1,9 +1,22 @@
 <base-html>
-  <hello-world greeting="Server Rendered!"></hello-world>
-  <my-header heading="Server Rendered Header"></my-header>
-  <h1>Hello World</h1>
-  <a href="/about">About</a>
-  <my-counter count="5"></my-counter>
-  <my-increment click></my-increment>
-  <my-decrement click></my-decrement>
+  <!-- <context-parent>
+    <hello-world greeting="Server Rendered!"></hello-world>
+    <my-header heading="Server Rendered Header"></my-header>
+    <h1>Hello World</h1>
+    <a href="/about">About</a>
+    <login-form></login-form>
+  </context-parent> -->
+  <auth-form type="login"></auth-form>
+
+  <!-- Registration form -->
+  <auth-form type="register"></auth-form>
+
+  <!-- Logout button -->
+  <logout-button></logout-button>
+
+  <!-- Auth-protected content -->
+  <auth-protected> Only visible when logged in </auth-protected>
+
+  <!-- Guest-only content -->
+  <guest-only> Only visible when not logged in </guest-only>
 </base-html>
